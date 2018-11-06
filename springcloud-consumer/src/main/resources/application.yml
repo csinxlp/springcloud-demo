@@ -1,0 +1,7 @@
+server:
+  port: 80
+eureka:
+  client:
+    register-with-eureka: false
+    service-url:
+      defaultZone: http://master:8760/eureka/,http://peer1:8761/eureka/,http://peer2:8762/eureka/

@@ -1,0 +1,10 @@
+server:
+  port: 8760 #设置项目端口
+eureka:
+  instance:
+    hostname: master
+  client:
+    serviceUrl:
+     defaultZone: http://peer1:8761/eureka/,http://peer2:8762/eureka/
+    register-with-eureka: false
+    fetch-registry: false
