@@ -98,5 +98,6 @@
 		<module>euerka-02</module>
         <module>springcloudprovider8002</module>
         <module>springcloudprovider8003</module>
+        <module>hystrix-provider</module>
     </modules>
 </project>
