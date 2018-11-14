@@ -59,12 +59,13 @@
 				<version>${junit.version}</version>
 				<scope>test</scope>
 			</dependency>
-			<dependency>
-				<groupId>log4j</groupId>
-				<artifactId>log4j</artifactId>
-				<version>${log4j.version}</version>
-			</dependency>
 
+			<!-- spring cloud 熔断 start -->
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-starter-hystrix</artifactId>
+			</dependency>
+			<!-- spring cloud 熔断 end-->
 		</dependencies>
 	</dependencyManagement>
 

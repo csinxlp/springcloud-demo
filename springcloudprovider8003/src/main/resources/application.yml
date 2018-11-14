@@ -29,3 +29,8 @@ mybatis:
   typeAliasesPackage: org.springcloud.entity
   configLocation: classpath:mybatis/mybatis.cfg.xml #指定全局配置文件的位置
   mapperLocations: classpath:mybatis/mapper/*.xml #指定sql映射文件的位置
+logging:
+  path: E://spring-cloud/provider8003
+  file: spring-cloud-provider8003.log
+  level:
+    root: info

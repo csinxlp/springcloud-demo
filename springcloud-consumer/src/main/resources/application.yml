@@ -5,3 +5,8 @@ eureka:
     register-with-eureka: false
     service-url:
       defaultZone: http://master:8760/eureka/,http://peer1:8761/eureka/,http://peer2:8762/eureka/
+logging:
+  path: E://spring-cloud/consumer
+  file: spring-cloud-consumer.log
+  level:
+    root: info
