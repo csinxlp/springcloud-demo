@@ -2,6 +2,8 @@ package org.springcloud.service;
 
 import org.springcloud.entity.Department;
 
+import java.util.List;
+
 public interface DepartmentService {
 	int deleteByPrimaryKey(Long id);
 
@@ -14,4 +16,6 @@ public interface DepartmentService {
     int updateByPrimaryKeySelective(Department record);
 
     int updateByPrimaryKey(Department record);
+
+    List<Department> listAll();
 }

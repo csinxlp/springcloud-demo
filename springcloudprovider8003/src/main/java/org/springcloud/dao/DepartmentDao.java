@@ -2,6 +2,8 @@ package org.springcloud.dao;
 
 import org.springcloud.entity.Department;
 
+import java.util.List;
+
 public interface DepartmentDao {
     int deleteByPrimaryKey(Long id);
 
@@ -14,4 +16,10 @@ public interface DepartmentDao {
     int updateByPrimaryKeySelective(Department record);
 
     int updateByPrimaryKey(Department record);
+
+    /**
+     *
+     * @return
+     */
+    List<Department> listAll();
 }

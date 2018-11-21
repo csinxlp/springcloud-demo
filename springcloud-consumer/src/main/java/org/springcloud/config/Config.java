@@ -6,11 +6,15 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.client.RestTemplate;
 
+/**
+ * 配置类
+ */
 @Configuration
 public class Config {
 
-
-    //向spring 添加restTemplat  并添加ribbon负载均衡
+    /**
+     * TODO 使用ribben 集成restTemplate实现简单的负载均衡
+     */
     @Bean
     @LoadBalanced
     public RestTemplate getRestTemplate(){

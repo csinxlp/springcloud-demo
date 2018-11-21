@@ -6,6 +6,8 @@ import org.springcloud.entity.Department;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service("departmentService")
 public class DepartmentImpl implements DepartmentService {
 	
@@ -41,4 +43,8 @@ public class DepartmentImpl implements DepartmentService {
 		return departmentDao.updateByPrimaryKey(record);
 	}
 
+	@Override
+	public List<Department> listAll() {
+		return departmentDao.listAll();
+	}
 }

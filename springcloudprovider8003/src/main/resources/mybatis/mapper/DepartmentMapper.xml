@@ -68,5 +68,12 @@
       db_source = #{dbSource,jdbcType=VARCHAR}
     where id = #{id,jdbcType=BIGINT}
   </update>
+
+
+  <select id="listAll" resultMap="BaseResultMap" >
+    select
+    <include refid="Base_Column_List" />
+    from department
+  </select>
   
 </mapper>
