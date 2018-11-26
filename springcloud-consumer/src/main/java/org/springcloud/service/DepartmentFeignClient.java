@@ -1,6 +1,7 @@
 package org.springcloud.service;
 
 import org.springcloud.entity.Department;
+import org.springcloud.service.component.DepartmentClientFallbackFactory;
 import org.springframework.cloud.netflix.feign.FeignClient;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,7 +14,7 @@ import java.util.List;
  * @author chenxinming
  * @version 1.0
  */
-@FeignClient(value = "department")
+@FeignClient(value = "department", configuration = DepartmentClientFallbackFactory.class, fallbackFactory = DepartmentClientFallbackFactory.class)
 public interface DepartmentFeignClient {
     /**
      * 根据id查询单个部门

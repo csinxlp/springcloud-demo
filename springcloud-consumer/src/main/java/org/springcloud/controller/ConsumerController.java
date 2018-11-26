@@ -17,9 +17,13 @@ public class ConsumerController {
     private DepartmentFeignClient departmentFeignClient =null;
 
     @RequestMapping(value = "/consumer/get/{id}",method = {RequestMethod.GET})
-    @HystrixCommand(fallbackMethod = "getFallback")
+    //@HystrixCommand(fallbackMethod = "getFallback")
     public String getById(@PathVariable("id") long id){
-        return departmentFeignClient.getById(id).toString();
+        Department department = departmentFeignClient.getById(id);
+        if(department ==null){
+            throw new RuntimeException("查询的信息不存在");
+        }
+        return department.toString();
     }
 
     @RequestMapping(value = "/listAll",method = {RequestMethod.GET})
@@ -27,8 +31,8 @@ public class ConsumerController {
         return departmentFeignClient.listAll().toString();
     }
 
-    private String getFallback(long id){
+   /* private String getFallback(long id){
        return new Department().setId(Long.MIN_VALUE).setDbSource("熔断测试数据").setName("熔断测试的名称").toString();
-    }
+    }*/
 
 }

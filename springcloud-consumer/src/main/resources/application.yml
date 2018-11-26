@@ -15,3 +15,6 @@ logging:
   file: spring-cloud-consumer.log
   level:
     root: info
+feign:
+  hystrix:
+    enabled: true
